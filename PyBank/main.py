@@ -1,4 +1,6 @@
 import csv
+import numpy as np
+import pandas as pd
 
 # Create list for months and profit/losses.
 months = []
@@ -23,10 +25,21 @@ with open('Resources/budget_data.csv', "r") as csvfile:
             change_profitlosses.append(current_change)
         # set up for next row 
         previous_profit = current_profit
+    
+    total_months = len(months)
+    total_net = sum(profit_losses)
+    average = str(round(sum(change_profitlosses)/len(change_months),2))
+    maxprofit = max(change_profitlosses)
+    minprofit = min(change_profitlosses)
 
-print("Sum: ", sum(profit_losses))
-print(len(months))
-print("Average is " , sum(change_profitlosses)/len(change_months))
+print("Financial Analysis")
+print("----------------------------")
+print("Total months: ", total_months)
+print(f"Total net profits: ${total_net}")
+print(f"Average change: ${average}")
+print(f"Greatest increase in profits:  ${maxprofit}")
+print(f"Greatest decrease in profit:  ${minprofit}")
+
 
 
     
