@@ -1,6 +1,6 @@
 Financial Analysis
 ----------------------------
-Total months:  86
+Total months: 86
 Total net profits: $22564198
 Average change: $-8311.11
 Greatest increase in profits:  $1862002 on Aug-16

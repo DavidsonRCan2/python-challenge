@@ -37,23 +37,24 @@ with open('Resources/budget_data.csv', "r") as csvfile:
     minprofit = min(change_profitlosses)
     minprofit_date = change_months[change_profitlosses.index(minprofit)]
 
-print("Financial Analysis")
-print("----------------------------")
-print("Total months: ", total_months)
-print(f"Total net profits: ${total_net}")
-print(f"Average change: ${average}")
-print(f"Greatest increase in profits:  ${maxprofit} on {maxprofit_date}")
-print(f"Greatest decrease in profit:  ${minprofit} on {minprofit_date}")
+# print block texts
+print(f"""Financial Analysis"
+----------------------------
+Total months: {total_months}
+Total net profits: ${total_net}
+Average change: ${average}
+Greatest increase in profits:  ${maxprofit} on {maxprofit_date}
+Greatest decrease in profit:  ${minprofit} on {minprofit_date}""")
 
 # print out to text file
 with open("/Users/rebeccadavidson/Library/CloudStorage/OneDrive-Personal/rice/Homework/03-python/python-challenge/PyBank/Analysis/PyBank_Output.txt", "w") as f:
-    print("Financial Analysis", file=f)
-    print("----------------------------", file=f)
-    print("Total months: ", total_months, file=f)
-    print(f"Total net profits: ${total_net}", file=f)
-    print(f"Average change: ${average}",file=f)
-    print(f"Greatest increase in profits:  ${maxprofit} on {maxprofit_date}",file=f)
-    print(f"Greatest decrease in profit:  ${minprofit} on {minprofit_date}",file=f)
+    print(f"""Financial Analysis
+----------------------------
+Total months: {total_months}
+Total net profits: ${total_net}
+Average change: ${average}
+Greatest increase in profits:  ${maxprofit} on {maxprofit_date}
+Greatest decrease in profit:  ${minprofit} on {minprofit_date}""", file=f)
 f.close()
 
     
