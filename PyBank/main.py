@@ -1,7 +1,5 @@
 import csv
-import numpy as np
 import pandas as pd
-import os
 
 # Create list for months and profit/losses.
 months = []
@@ -31,7 +29,7 @@ with open('Resources/budget_data.csv', "r") as csvfile:
     # variables for easier printout
     total_months = len(months)
     total_net = sum(profit_losses)
-    average = str(round(sum(change_profitlosses)/len(change_months),2))
+    average = (round(sum(change_profitlosses)/len(change_months),2))
     maxprofit = max(change_profitlosses)
     maxprofit_date = change_months[change_profitlosses.index(maxprofit)]
     minprofit = min(change_profitlosses)
