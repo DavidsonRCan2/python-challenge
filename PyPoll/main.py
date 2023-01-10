@@ -1,7 +1,5 @@
 import csv
 import pandas as pd
-import os
-
 
 ballot = []
 candidate = []
@@ -14,12 +12,12 @@ with open("Resources/election_data.csv", "r") as csvfile:
         ballot.append(str(row["Ballot ID"]))
         candidate.append(str(row["Candidate"]))
 
-    TotalVotes = (len(ballot))
+    TotalVotes = len(ballot)
     
     # fo find individual candidate names
-    set_res = set(candidate)
-    list_res = (list(set_res))
-    # print(list_res)
+    # candidate_set = set(candidate)
+    # candidate_list = list(candidate_set)
+    # # print(candidate_list)
 
 # to calculate how many votes per candidate
     count = pd.Series(candidate).value_counts()
